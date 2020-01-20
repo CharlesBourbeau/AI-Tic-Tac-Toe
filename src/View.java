@@ -19,10 +19,10 @@ import java.util.ArrayList;
 public class View extends Application {
 
     // Button that starts the game
-    private Button start_button;
+    private Button restart_button;
 
     // List of labels representing cells in the GUI
-    private ArrayList<Label> grid_labels = new ArrayList<>();
+    private static ArrayList<Label> grid_labels = new ArrayList<>();
 
     // Battlefield containing the current game
     private static Battlefield battlefield;
@@ -34,7 +34,6 @@ public class View extends Application {
     boolean playerReady = false;
 
     public static void main(String[] args){
-        battlefield = new Battlefield();
         launch(args);
     }
 
@@ -101,12 +100,43 @@ public class View extends Application {
             }
         }
 
-        start_button = new Button();
-        start_button.setText("Restart");
-        start_button.setOnAction(e -> startPressed());
-        start_button.setMinWidth(grid_labels.get(0).getPrefWidth());
+        restart_button = new Button();
+        restart_button.setText("Restart");
+        restart_button.setOnAction(e -> restartPressed());
+        restart_button.setMinWidth(grid_labels.get(0).getPrefWidth());
 
-        gridPane.add(start_button, 1, 4, 1, 1);
+        battlefield = new Battlefield();
+        if (battlefield.current_player == 0){
+            System.out.println("A.I. first");
+
+            State currentState = new State(battlefield.current_game,1);
+            currentState.endStateTest();
+            if(currentState.gameStatus != State.GameStatus.Nothing) {
+                return;
+            }
+            sNode currentNode = new sNode(currentState);
+            currentStateTree = new StateDataStructure();
+            // populate the tree with all the possible plays
+            currentStateTree.generateSearchTree(currentNode);
+
+            // compute the winning probabilities of every play
+            currentStateTree.computeProbabilities(currentNode);
+
+            sNode futureNode = currentStateTree.pickOptimalPlay(currentNode);
+            futureNode.pState.stateDisplay();
+            for(int i = 0 ; i < 3 ; i ++) {
+                for(int j = 0 ; j < 3 ; j ++) {
+                    if(battlefield.current_game[i][j] != futureNode.pState.game[i][j]){
+                        int index = i * 3 + j;
+                        Label label = grid_labels.get(index);
+                        label.setText("O");
+                        battlefield.current_game[i][j] = futureNode.pState.game[i][j];
+                    }
+                }
+            }
+        }
+
+        gridPane.add(restart_button, 1, 4, 1, 1);
         gridPane.setAlignment(Pos.CENTER);
         Scene scene = new Scene(gridPane);
         primaryStage.setScene(scene);
@@ -117,7 +147,13 @@ public class View extends Application {
 
     }
 
-    public void startPressed(){
+    public void restartPressed(){
+        // Clear all the labels
+        for(int i = 0; i < grid_labels.size(); i++) {
+            Label current_label = grid_labels.get(i);
+            current_label.setText("");
+        }
+        battlefield = new Battlefield();
         System.out.println("restart");
     }
 
