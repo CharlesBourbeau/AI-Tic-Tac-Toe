@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="76c6b323-6dcd-43f7-9898-041710ef5fae" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WVKI3A187CL4wM9KiimIfyGdV1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RunManager" selected="Application.View">
+    <configuration name="Battlefield" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Battlefield" />
+      <module name="AI-TicTacToe" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="View" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="View" />
+      <module name="AI-TicTacToe" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.View" />
+        <item itemvalue="Application.Battlefield" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76c6b323-6dcd-43f7-9898-041710ef5fae" name="Default Changelist" comment="" />
+      <created>1579229239321</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579229239321</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="727" y="151" key="#com.intellij.ide.util.MemberChooser" timestamp="1579230366480">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="727" y="151" key="#com.intellij.ide.util.MemberChooser/1920.570.1440.813/0.23.1920.1057@0.23.1920.1057" timestamp="1579230366480" />
+    <state x="727" y="143" key="#com.intellij.ide.util.MemberChooser/1920.570.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579229976236" />
+    <state x="673" y="303" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1579488580220">
+      <screen x="0" y="23" width="1920" height="993" />
+    </state>
+    <state x="673" y="303" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.570.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579488580220" />
+    <state width="1757" height="197" key="GridCell.Tab.0.bottom" timestamp="1579490602152">
+      <screen x="0" y="23" width="1920" height="993" />
+    </state>
+    <state width="1358" height="197" key="GridCell.Tab.0.bottom/0.23.1440.813@0.23.1440.813" timestamp="1579284893115" />
+    <state width="1358" height="197" key="GridCell.Tab.0.bottom/1920.570.1440.813/0.23.1920.1057@0.23.1920.1057" timestamp="1579230765406" />
+    <state width="1757" height="197" key="GridCell.Tab.0.bottom/1920.570.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579490602152" />
+    <state width="1757" height="197" key="GridCell.Tab.0.center" timestamp="1579490602149">
+      <screen x="0" y="23" width="1920" height="993" />
+    </state>
+    <state width="1358" height="197" key="GridCell.Tab.0.center/0.23.1440.813@0.23.1440.813" timestamp="1579284893114" />
+    <state width="1358" height="197" key="GridCell.Tab.0.center/1920.570.1440.813/0.23.1920.1057@0.23.1920.1057" timestamp="1579230765405" />
+    <state width="1757" height="197" key="GridCell.Tab.0.center/1920.570.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579490602149" />
+    <state width="1757" height="197" key="GridCell.Tab.0.left" timestamp="1579490602147">
+      <screen x="0" y="23" width="1920" height="993" />
+    </state>
+    <state width="1358" height="197" key="GridCell.Tab.0.left/0.23.1440.813@0.23.1440.813" timestamp="1579284893113" />
+    <state width="1358" height="197" key="GridCell.Tab.0.left/1920.570.1440.813/0.23.1920.1057@0.23.1920.1057" timestamp="1579230765404" />
+    <state width="1757" height="197" key="GridCell.Tab.0.left/1920.570.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579490602147" />
+    <state width="1757" height="197" key="GridCell.Tab.0.right" timestamp="1579490602150">
+      <screen x="0" y="23" width="1920" height="993" />
+    </state>
+    <state width="1358" height="197" key="GridCell.Tab.0.right/0.23.1440.813@0.23.1440.813" timestamp="1579284893115" />
+    <state width="1358" height="197" key="GridCell.Tab.0.right/1920.570.1440.813/0.23.1920.1057@0.23.1920.1057" timestamp="1579230765405" />
+    <state width="1757" height="197" key="GridCell.Tab.0.right/1920.570.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579490602150" />
+    <state x="402" y="23" key="SettingsEditor" timestamp="1579232128763">
+      <screen x="0" y="23" width="1920" height="993" />
+    </state>
+    <state x="402" y="23" key="SettingsEditor/1920.570.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579232128763" />
+    <state x="899" y="243" key="com.intellij.ide.util.TipDialog" timestamp="1579229251012">
+      <screen x="0" y="23" width="1920" height="993" />
+    </state>
+    <state x="899" y="243" key="com.intellij.ide.util.TipDialog/1920.570.1440.877/0.23.1920.993@0.23.1920.993" timestamp="1579229251012" />
+  </component>
+</project>
