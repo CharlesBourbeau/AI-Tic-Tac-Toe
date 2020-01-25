@@ -12,8 +12,8 @@ public class StateDataStructure {
 	
 	public void generateSearchTree(sNode aNode) {
 		//aNode.pState.stateDisplay();
-		counter++;
-		System.out.println(counter);
+		//counter++;
+		//System.out.println(counter);
 		// return when the game is either won, lost or drawn
 		if(aNode.pState.gameStatus != State.GameStatus.Nothing) {
 			return;

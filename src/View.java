@@ -67,31 +67,8 @@ public class View extends Application {
                         battlefield.current_player = 1;
                         battlefield.play(x, y);
 
-                        State currentState = new State(battlefield.current_game,1);
-                        currentState.endStateTest();
-                        if(currentState.gameStatus != State.GameStatus.Nothing) {
-                            return;
-                        }
-                        sNode currentNode = new sNode(currentState);
-                        currentStateTree = new StateDataStructure();
-                        // populate the tree with all the possible plays
-                        currentStateTree.generateSearchTree(currentNode);
-
-                        // compute the winning probabilities of every play
-                        currentStateTree.computeProbabilities(currentNode);
-
-                        sNode futureNode = currentStateTree.pickOptimalPlay(currentNode);
-                        futureNode.pState.stateDisplay();
-                        for(int i = 0 ; i < 3 ; i ++) {
-                            for(int j = 0 ; j < 3 ; j ++) {
-                                if(battlefield.current_game[i][j] != futureNode.pState.game[i][j]){
-                                    index = i * 3 + j;
-                                    Label label = grid_labels.get(index);
-                                    label.setText("O");
-                                    battlefield.current_game[i][j] = futureNode.pState.game[i][j];
-                                }
-                            }
-                        }
+                        battlefield.current_player = 0;
+                        AIPlay();
 
                     }
                 });
@@ -106,6 +83,30 @@ public class View extends Application {
         restart_button.setMinWidth(grid_labels.get(0).getPrefWidth());
 
         battlefield = new Battlefield();
+        // AI will play if the current player is 0
+        AIPlay();
+
+        gridPane.add(restart_button, 1, 4, 1, 1);
+        gridPane.setAlignment(Pos.CENTER);
+        Scene scene = new Scene(gridPane);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+        System.out.println("here");
+
+    }
+
+    public void restartPressed(){
+        // Clear all the labels
+        for(int i = 0; i < grid_labels.size(); i++) {
+            Label current_label = grid_labels.get(i);
+            current_label.setText("");
+        }
+        battlefield = new Battlefield();
+        AIPlay();
+        System.out.println("restart");
+    }
+
+    public static void AIPlay(){
         if (battlefield.current_player == 0){
             System.out.println("A.I. first");
 
@@ -135,26 +136,5 @@ public class View extends Application {
                 }
             }
         }
-
-        gridPane.add(restart_button, 1, 4, 1, 1);
-        gridPane.setAlignment(Pos.CENTER);
-        Scene scene = new Scene(gridPane);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-        System.out.println("here");
-
-
-
     }
-
-    public void restartPressed(){
-        // Clear all the labels
-        for(int i = 0; i < grid_labels.size(); i++) {
-            Label current_label = grid_labels.get(i);
-            current_label.setText("");
-        }
-        battlefield = new Battlefield();
-        System.out.println("restart");
-    }
-
 }
